@@ -1,0 +1,55 @@
+<!DOCTYPE HTML> 
+
+<html>
+<head>
+<title>013 help</title>
+<style>
+body {
+   background-image: url("fon1.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   }
+</style>
+</head>
+<body>
+<center>
+<font color=white size=5>
+<script language="JavaScript">
+Data = new Date();
+Month = Data.getMonth();
+switch (Month)
+{
+  case 0: fMonth="января"; break;
+  case 1: fMonth="февраля"; break;
+  case 2: fMonth="марта"; break;
+  case 3: fMonth="апреля"; break;
+  case 4: fMonth="мае"; break;
+  case 5: fMonth="июня"; break;
+  case 6: fMonth="июля"; break;
+  case 7: fMonth="августа"; break;
+  case 8: fMonth="сентября"; break;
+  case 9: fMonth="октября"; break;
+  case 10: fMonth="ноября"; break;
+  case 11: fMonth="декабря"; break;
+}
+document.write("Сегодня " + Data.getDate() + " " + fMonth + " " + Data.getFullYear() + " года");
+</script>
+<br>
+<div id="time">
+<script language="JavaScript">
+var time = setInterval(function() {
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  if (hours < 10) hours = "0" + hours;
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+  document.getElementById("time").innerHTML = ("Текущее время: " + hours + ":" + minutes + ":" + seconds);
+}, 100);
+</script>
+</div>
+</center>
+</body>
+</html>
